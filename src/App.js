@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import EffectSelector from "./components/EffectSelector.js";
+import FallingRain from "./components/FallingRain.js";
 
 function App() {
+  const [effect, setEffect] = useState("falling-rain");
+  const [speed, setSpeed] = useState(1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="channel">
+        <div className="effect-display">
+          {effect === "falling-rain" && <FallingRain speed={speed} />}
+        </div>
+        <EffectSelector
+          effect={effect}
+          setEffect={setEffect}
+          speed={speed}
+          setSpeed={setSpeed}
+        />
+      </div>
     </div>
   );
 }

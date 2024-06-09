@@ -1,0 +1,24 @@
+.rain-col{
+  display: flex;
+  column-gap: 1rem;
+  justify-content: space-between;
+}
+
+.falling-rain {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  animation: fall linear infinite;
+  margin-top: -13rem;
+}
+
+.rain-box {
+  width: 20px;
+  height: 20px;
+  background-color: inherit;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-13rem); }
+  100% { transform: translateY(33rem); }
+}
