@@ -8,8 +8,8 @@
   display: flex;
   flex-direction: column;
   row-gap: 2px;
-  animation: fall linear infinite;
-  margin-top: -13rem;
+  /* animation: fall linear infinite; */
+  /* margin-top: -13rem; */
 }
 
 .rain-box {

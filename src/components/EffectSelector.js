@@ -1,8 +1,8 @@
 function EffectSelector({ effect, setEffect, speed, setSpeed }) {
   return (
-    <div className="effect-selector">
+    <fieldset className="effect-selector ">
+      <legend>Channel 1 / Effect 1</legend>
       <div className="effect">
-        <label>Select Effect:</label>
         <select value={effect} onChange={(e) => setEffect(e.target.value)}>
           <option value="falling-rain">Falling Rain</option>
           <option value="blackout">Blackout</option>
@@ -14,10 +14,10 @@ function EffectSelector({ effect, setEffect, speed, setSpeed }) {
         min="1"
         max="10"
         value={speed}
-        style={{marginLeft: '1rem'}}
+        className="range"
         onChange={(e) => setSpeed(e.target.value)}
       />
-    </div>
+    </fieldset>
   );
 }
 
